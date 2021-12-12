@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export const Topo = () => {
@@ -16,20 +16,26 @@ export const Topo = () => {
                     </View>
                     <View style={styles.posicaoicones}>
                         
-                        <Image
-                            source={require('../../assets/publicar.png')}
-                            style={styles.publicar}
-                        />
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/publicar.png')}
+                                style={styles.publicar}
+                            />
+                        </TouchableOpacity>
 
-                        <Image
-                            source={require('../../assets/coracao.png')}
-                            style={styles.coracao}
-                        />
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/coracao.png')}
+                                style={styles.coracao}
+                            />
+                        </TouchableOpacity>
 
-                        <Image
-                            source={require('../../assets/aviao.png')}
-                            style={styles.aviao}
-                        />
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/aviao.png')}
+                                style={styles.aviao}
+                            />
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
@@ -38,9 +44,7 @@ export const Topo = () => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'red'
-    },
+
     logo: {
         width: 100,
         height: 40,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Topo } from '../../components/Header';
 import { Story } from '../../components/Story/story';
@@ -9,18 +9,24 @@ export const Home = () => {
     const navigation = useNavigation();
 
     return (
-       <>
+        <>
             <Topo />
-          
             <View>
                 <ScrollView>
-                <Story />
+                    <Story />
                     <View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Image
-                                source={require('../../assets/3.jpg')}
-                                style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7,borderColor: '#E95651', borderWidth: 3 }} />
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/3.jpg')}
+                                    style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderColor: '#E95651', borderWidth: 3 }} />
+                            </TouchableOpacity>
                             <Text style={{ color: 'black', fontWeight: "bold", top: 10, fontSize: 15 }}>Odin</Text>
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/3pontos.png')}
+                                    style={{ width: 40, height: 40, margin: 7, left: 260 }} />
+                            </TouchableOpacity>
                         </View>
                         <Image
                             source={require('../../assets/paisagem.jpg')}
@@ -28,51 +34,60 @@ export const Home = () => {
 
                         <View style={styles.tudo}>
                             <View style={styles.posicaoicones}>
-                            
-                                <Image
-                                    source={require('../../assets/coracao.png')}
-                                    style={styles.publicar}
-                                />
 
-                                <Image
-                                    source={require('../../assets/conversa.png')}
-                                    style={styles.conversa}
-                                />
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/coracao.png')}
+                                        style={styles.publicar}
+                                    />
+                                </TouchableOpacity>
 
-                                <Image
-                                    source={require('../../assets/aviao.png')}
-                                    style={styles.aviao}
-                                />
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/conversa.png')}
+                                        style={styles.conversa}
+                                    />
+                                </TouchableOpacity>
+
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/aviao.png')}
+                                        style={styles.aviao}
+                                    />
+                                </TouchableOpacity>
                             </View>
 
                             <View style={styles.posicaoicones2}>
-                            
-                                <Image
-                                    source={require('../../assets/marcacao.png')}
-                                    style={styles.publicar}
-                                />
 
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/marcacao.png')}
+                                        style={styles.publicar}
+                                    />
+                                </TouchableOpacity>
                             </View>
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>Curtido por </Text>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Freed </Text>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>e </Text>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>outras pessoas</Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>Curtido por </Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Freed </Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>e </Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>outras pessoas</Text>
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Odin </Text>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>Dia e lugar perfeito para correr e brincar.</Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Odin </Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>Dia e lugar perfeito para correr e brincar.</Text>
                         </View>
 
-                        <Text style={{ left:10, color: 'blue', fontSize: 15 }}> #Brincar #Diaperfeito #Lugarperfeito</Text>
+                        <Text style={{ left: 10, color: 'blue', fontSize: 15 }}> #Brincar #Diaperfeito #Lugarperfeito</Text>
 
                         <View style={{ flexDirection: 'row' }}>
-                            <Image
-                                source={require('../../assets/1.jpg')}
-                                style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderWidth: 3 }} />
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/1.jpg')}
+                                    style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderWidth: 3 }} />
+                            </TouchableOpacity>
                             <Text style={{ fontWeight: "bold", top: 15, fontSize: 15 }}>Adicione um comentário...</Text>
                             <Image
                                 source={require('../../assets/emogi.png')}
@@ -80,17 +95,25 @@ export const Home = () => {
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ color: 'black', fontSize: 11, margin: 1, left:10 }}>Há 4 horas </Text>
+                            <Text style={{ color: 'black', fontSize: 11, margin: 1, left: 10 }}>Há 4 horas </Text>
                         </View>
                         <Text></Text>
                     </View>
 
                     <View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Image
-                                source={require('../../assets/4.jpg')}
-                                style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7,borderColor: 'gray', borderWidth: 1 }} />
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/4.jpg')}
+                                    style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderColor: 'gray', borderWidth: 1 }} />
+                            </TouchableOpacity>
+
                             <Text style={{ color: 'black', fontWeight: "bold", top: 10, fontSize: 15 }}>Alex</Text>
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/3pontos.png')}
+                                    style={{ width: 40, height: 40, margin: 7, left: 260 }} />
+                            </TouchableOpacity>
                         </View>
                         <Image
                             source={require('../../assets/brinquedo.jpg')}
@@ -98,51 +121,60 @@ export const Home = () => {
 
                         <View style={styles.tudo}>
                             <View style={styles.posicaoicones}>
-                            
-                                <Image
-                                    source={require('../../assets/coracao.png')}
-                                    style={styles.publicar}
-                                />
 
-                                <Image
-                                    source={require('../../assets/conversa.png')}
-                                    style={styles.conversa}
-                                />
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/coracao.png')}
+                                        style={styles.publicar}
+                                    />
+                                </TouchableOpacity>
 
-                                <Image
-                                    source={require('../../assets/aviao.png')}
-                                    style={styles.aviao}
-                                />
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/conversa.png')}
+                                        style={styles.conversa}
+                                    />
+                                </TouchableOpacity>
+
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/aviao.png')}
+                                        style={styles.aviao}
+                                    />
+                                </TouchableOpacity>
                             </View>
 
                             <View style={styles.posicaoicones2}>
-                            
-                                <Image
-                                    source={require('../../assets/marcacao.png')}
-                                    style={styles.publicar}
-                                />
 
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/marcacao.png')}
+                                        style={styles.publicar}
+                                    />
+                                </TouchableOpacity>
                             </View>
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>Curtido por </Text>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Laila </Text>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>e </Text>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>outras pessoas</Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>Curtido por </Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Laila </Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>e </Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>outras pessoas</Text>
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Alex </Text>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>Meu irmão e seu brinquedo novo.</Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Alex </Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>Meu irmão e seu brinquedo novo.</Text>
                         </View>
 
-                        <Text style={{ left:10, color: 'blue', fontSize: 15 }}> #Irmão #Brinquedo #Correr </Text>
+                        <Text style={{ left: 10, color: 'blue', fontSize: 15 }}> #Irmão #Brinquedo #Correr </Text>
 
                         <View style={{ flexDirection: 'row' }}>
-                            <Image
-                                source={require('../../assets/1.jpg')}
-                                style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderWidth: 3 }} />
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/1.jpg')}
+                                    style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderWidth: 3 }} />
+                            </TouchableOpacity>
                             <Text style={{ fontWeight: "bold", top: 15, fontSize: 15 }}>Adicione um comentário...</Text>
                             <Image
                                 source={require('../../assets/emogi.png')}
@@ -150,17 +182,24 @@ export const Home = () => {
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ color: 'black', fontSize: 11, margin: 1, left:10 }}>Há 12 horas </Text>
+                            <Text style={{ color: 'black', fontSize: 11, margin: 1, left: 10 }}>Há 12 horas </Text>
                         </View>
                         <Text></Text>
                     </View>
 
                     <View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Image
-                                source={require('../../assets/2.jpg')}
-                                style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7,borderColor: '#E95651', borderWidth: 3 }} />
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/2.jpg')}
+                                    style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderColor: '#E95651', borderWidth: 3 }} />
+                            </TouchableOpacity>
                             <Text style={{ color: 'black', fontWeight: "bold", top: 10, fontSize: 15 }}>Laila</Text>
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/3pontos.png')}
+                                    style={{ width: 40, height: 40, margin: 7, left: 260 }} />
+                            </TouchableOpacity>
                         </View>
                         <Image
                             source={require('../../assets/esquilo.jpg')}
@@ -168,65 +207,74 @@ export const Home = () => {
 
                         <View style={styles.tudo}>
                             <View style={styles.posicaoicones}>
-                            
-                                <Image
-                                    source={require('../../assets/coracao.png')}
-                                    style={styles.publicar}
-                                />
 
-                                <Image
-                                    source={require('../../assets/conversa.png')}
-                                    style={styles.conversa}
-                                />
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/coracao.png')}
+                                        style={styles.publicar}
+                                    />
+                                </TouchableOpacity>
 
-                                <Image
-                                    source={require('../../assets/aviao.png')}
-                                    style={styles.aviao}
-                                />
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/conversa.png')}
+                                        style={styles.conversa}
+                                    />
+                                </TouchableOpacity>
+
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/aviao.png')}
+                                        style={styles.aviao}
+                                    />
+                                </TouchableOpacity>
                             </View>
 
                             <View style={styles.posicaoicones2}>
-                            
-                                <Image
-                                    source={require('../../assets/marcacao.png')}
-                                    style={styles.publicar}
-                                />
 
+                                <TouchableOpacity>
+                                    <Image
+                                        source={require('../../assets/marcacao.png')}
+                                        style={styles.publicar}
+                                    />
+                                </TouchableOpacity>
                             </View>
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>Curtido por </Text>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Freed </Text>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>e </Text>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>outras pessoas</Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>Curtido por </Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Freed </Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>e </Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>outras pessoas</Text>
                         </View>
 
                         <View style={styles.texto}>
-                            <Text style={{ left:10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Laila </Text>
-                            <Text style={{ left:10, color: 'black', fontSize: 15 }}>Esquilo !!!!!!!</Text>
+                            <Text style={{ left: 10, color: 'black', fontWeight: "bold", fontSize: 15 }}>Laila </Text>
+                            <Text style={{ left: 10, color: 'black', fontSize: 15 }}>Esquilo !!!!!!!</Text>
                         </View>
 
-                        <Text style={{ left:10, color: 'blue', fontSize: 15 }}> #Pega #Esquilo</Text>
+                        <Text style={{ left: 10, color: 'blue', fontSize: 15 }}> #Pega #Esquilo</Text>
 
                         <View style={{ flexDirection: 'row' }}>
-                            <Image
-                                source={require('../../assets/1.jpg')}
-                                style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderWidth: 3 }} />
+                            <TouchableOpacity>
+                                <Image
+                                    source={require('../../assets/1.jpg')}
+                                    style={{ width: 40, height: 40, borderRadius: 400 / 2, margin: 7, borderWidth: 3 }} />
+                            </TouchableOpacity>
                             <Text style={{ fontWeight: "bold", top: 15, fontSize: 15 }}>Adicione um comentário...</Text>
                             <Image
                                 source={require('../../assets/emogi.png')}
                                 style={{ width: 70, height: 40, margin: 7, borderWidth: 3, left: 70 }} />
                         </View>
 
-                        <View style={styles.texto}>
-                            <Text style={{ color: 'black', fontSize: 11, margin: 1, left:10 }}>Há 15 horas </Text>
+                        <View style={styles.texto1}>
+                            <Text style={{ color: 'black', fontSize: 11, margin: 1, left: 10 }}>Há 15 horas </Text>
                         </View>
-                        <Text></Text>
+
                     </View>
                 </ScrollView>
             </View>
-            <Base/>
+            <Base />
         </>
     )
 }
@@ -243,7 +291,7 @@ const styles = StyleSheet.create({
         height: 35,
         margin: 3
     },
-  
+
     publicar: {
         width: 35,
         height: 35,
@@ -253,14 +301,18 @@ const styles = StyleSheet.create({
         width: '50%',
         flexDirection: 'row',
     },
-    posicaoicones2:{
+    posicaoicones2: {
         width: '50%',
         alignItems: 'flex-end'
     },
-    tudo:{
+    tudo: {
         flexDirection: 'row',
     },
-    texto:{
+    texto: {
         flexDirection: 'row',
-      },
+    },
+    texto1: {
+        flexDirection: 'row',
+        paddingBottom: 120
+    },
 });
