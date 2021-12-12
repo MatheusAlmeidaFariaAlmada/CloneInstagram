@@ -3,6 +3,7 @@ import { StyleSheet, Text, ScrollView, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Topo } from '../../components/Header';
 import { Story } from '../../components/Story/story';
+import { Base } from '../../components/Footer';
 
 export const Home = () => {
     const navigation = useNavigation();
@@ -22,7 +23,7 @@ export const Home = () => {
                         </View>
                         <Image
                             source={require('../../assets/paisagem.jpg')}
-                            style={{ width: 390, height: 390, margin: 1, borderWidth: 3 }} />
+                            style={{ width: 390, height: 280, margin: 1, borderWidth: 3 }} />
 
                         <View style={styles.tudo}>
                             <View style={styles.posicaoicones}>
@@ -58,6 +59,7 @@ export const Home = () => {
                     
                 </ScrollView>
             </View>
+            <Base/>
         </>
     )
 }
