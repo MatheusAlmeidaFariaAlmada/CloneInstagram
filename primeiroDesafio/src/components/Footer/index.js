@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     cabecalho: {
         backgroundColor: '#FFF',
         position: "absolute",
-        bottom: 0
+        bottom: 0,
+        width: '100%'
     },
     posicaoicones: {
         flexDirection: 'row',

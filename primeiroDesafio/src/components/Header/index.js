@@ -61,15 +61,15 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end'
     },
     aviao: {
-        width: 30,
-        height: 30,
-        margin: 8
+        width: 35,
+        height: 35,
+        margin: 7
     },
 
     coracao: {
         width: 35,
-        height: 30,
-        margin: 8
+        height: 35,
+        margin: 7
     },
   
     publicar: {
