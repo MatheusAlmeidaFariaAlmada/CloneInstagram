@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export const Base = () => {
@@ -11,31 +11,40 @@ export const Base = () => {
                    
                     <View style={styles.posicaoicones}>
                         
-                        <Image
-                            source={require('../../assets/casa.png')}
-                            style={styles.casa}
-                        />
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/casa.png')}
+                                style={styles.casa}
+                            />
+                        </TouchableOpacity>
 
-                        <Image
-                            source={require('../../assets/lupa.png')}
-                            style={styles.lupa}
-                        />
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/lupa.png')}
+                                style={styles.lupa}
+                            />
+                        </TouchableOpacity>
 
-                        <Image
-                            source={require('../../assets/reels.png')}
-                            style={styles.reels}
-                        />
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/reels.png')}
+                                style={styles.reels}
+                            />
+                        </TouchableOpacity>
 
-                        <Image
-                            source={require('../../assets/compras.png')}
-                            style={styles.compras}
-                        />
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/compras.png')}
+                                style={styles.compras}
+                            />
+                        </TouchableOpacity>
 
-                        <Image
-                            source={require('../../assets/1.jpg')}
-                            style={{ width: 30, height: 30, borderRadius: 400 / 2, margin: 2, borderWidth: 3 }} 
-                        />
-                            
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../assets/1.jpg')}
+                                style={{ width: 30, height: 30, borderRadius: 400 / 2, margin: 2, borderWidth: 3 }} 
+                            />
+                        </TouchableOpacity>    
                     </View>
                 </View>
             </View>
